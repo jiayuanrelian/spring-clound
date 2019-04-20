@@ -18,7 +18,12 @@
     <modules>
         <module>spring-clound-test</module>
         <module>microservice-eureka-server</module>
+        <module>microservice-eureka-user</module>
     </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
