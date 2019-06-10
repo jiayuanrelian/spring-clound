@@ -24,6 +24,7 @@
         <module>microservice-eureka-config-localserver</module>
         <module>microservice-eureka-config-client</module>
         <module>microservice-eureka-config-gitserver</module>
+        <module>microservice-eureka-order</module>
     </modules>
 
     <properties>
