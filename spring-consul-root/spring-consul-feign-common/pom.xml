@@ -8,13 +8,14 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>spring-consul-feign-client</artifactId>
+
+    <artifactId>spring-consul-feign-common</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>com.yuantong.project</groupId>
-            <artifactId>spring-consul-feign-common</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.6</version>
         </dependency>
     </dependencies>
 </project>

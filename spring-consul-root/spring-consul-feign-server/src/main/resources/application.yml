@@ -1,0 +1,27 @@
+# web容器配置
+server:
+  port: 8001
+  servlet:
+    context-path: /
+# spring配置
+spring:
+  application:
+    name: springcloud-provider
+  cloud:
+    consul:
+      host: 47.98.59.135                               # consul server 地址
+      port: 8500                                        # consul server端口
+      discovery:
+        register: true                                   # 注册当前服务到consul server
+        serviceName: ${spring.application.name}          # 注册到consul server中的当前服务的名称
+        heartbeat:
+          enabled: true                                  # 心跳检查
+        healthCheckPath: ${management.context-path}/health                # 健康监控地址
+        healthCheckInterval: 15s                         # Consul 健康检查频率,也就是心跳频率
+        instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}} # spring.cloud.consul.discovery.instanceId配置 Consul 注册服务 ID
+# 端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
