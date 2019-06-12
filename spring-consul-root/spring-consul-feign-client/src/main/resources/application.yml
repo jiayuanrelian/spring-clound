@@ -11,6 +11,7 @@ spring:
       host: 47.98.59.135                               # consul server 地址
       port: 8500                                        # consul server端口
       discovery:
+        health-check-critical-timeout: 10s                #过了多少秒之后，剔除无效的服务
         register: true                                   # 注册当前服务到consul server
         serviceName: ${spring.application.name}          # 注册到consul server中的当前服务的名称
         heartbeat:

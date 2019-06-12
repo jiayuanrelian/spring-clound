@@ -13,9 +13,19 @@
     <dependencies>
         <dependency>
             <groupId>com.yuantong.project</groupId>
-            <artifactId>spring-consul-feign-common</artifactId>
+            <artifactId>spring-consul-feign-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <!--在添加了该插件之后，当运行“mvn package”进行打包时，会打包成一个可以直接运行的 JAR 文件，
+            使用“Java -jar”命令就可以直接运行。这在很大程度上简化了应用的部署，只需要安装了 JRE 就可以运行。-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
