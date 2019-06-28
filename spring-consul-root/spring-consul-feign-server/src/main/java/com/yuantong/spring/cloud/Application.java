@@ -2,8 +2,8 @@ package com.yuantong.spring.cloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 /**
  * 启动类
@@ -12,16 +12,16 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
-public final class ConsulFeignClientApplication {
-    private ConsulFeignClientApplication() {
-    }
+@EnableCaching
+public final class Application {
 
+    private Application() {
+    }
     /**
      * 启动方法
      * @param args 参数
      */
     public static void main(final String[] args) {
-        SpringApplication.run(ConsulFeignClientApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 }

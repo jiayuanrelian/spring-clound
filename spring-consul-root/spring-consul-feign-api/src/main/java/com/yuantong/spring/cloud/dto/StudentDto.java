@@ -5,6 +5,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * 学生信息对象
+ * @author jl
+ * @since 0.0.1
+ */
 @Getter
 @Setter
 @ToString
