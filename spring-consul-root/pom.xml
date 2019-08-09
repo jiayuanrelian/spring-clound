@@ -112,6 +112,23 @@
                     </dependency>
                 </dependencies>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <!-- <configLocation>${basedir}/springside-findbugs.xml</configLocation> -->
+                    <!-- 自定义规则文件 -->
+                    <excludeFilterFile>findbugs-exclude.xml</excludeFilterFile>
+                    <includeFilterFile>findbugs-include.xml</includeFilterFile>
+                    <includeFilterFile>findbugs-rules.xml</includeFilterFile>
+                    <threshold>High</threshold>
+                    <effort>Default</effort>
+                    <findbugsXmlOutput>true</findbugsXmlOutput>
+                    <!-- findbugs xml输出路径-->
+                    <findbugsXmlOutputDirectory>target/site</findbugsXmlOutputDirectory>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
