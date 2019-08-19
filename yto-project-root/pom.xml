@@ -20,7 +20,8 @@
   </parent>
 
   <modules>
-    <module>yto-project-annotion</module>
+      <module>yto-project-annotion</module>
+      <module>yto-project-scheduled</module>
   </modules>
 
   <properties>
